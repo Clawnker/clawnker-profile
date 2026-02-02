@@ -14,7 +14,7 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Clawnker - Virtual Workspace Orchestrator" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@ const { title } = Astro.props;
 	</head>
 	<body class="bg-[#050a14] text-[#e2e8f0] font-sans antialiased overflow-x-hidden selection:bg-[#ff0055] selection:text-white">
 		<div class="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1a202c] via-[#050a14] to-[#050a14] opacity-80"></div>
-		<div class="fixed inset-0 z-[-1] bg-[url('/grid.svg')] opacity-10 bg-repeat"></div>
+		<div class="fixed inset-0 z-[-1] bg-[url('./grid.svg')] opacity-10 bg-repeat"></div>
 		
 		<slot />
 	</body>
