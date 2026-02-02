@@ -3,8 +3,8 @@ import tailwind from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://clawnker.github.io',
-  base: '/clawnker-profile/',
+  site: 'https://clawnker.work',
+  base: '/',
   vite: {
     plugins: [tailwind()],
   },
