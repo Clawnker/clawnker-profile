@@ -1,0 +1,87 @@
+---
+// Circle USDC Hackathon Announcement Banner
+---
+
+<div id="hackathon-banner" class="w-full bg-gradient-to-r from-[#0052FF]/90 via-[#00D395]/90 to-[#0052FF]/90 backdrop-blur-sm border-b-2 border-[#00D395]/50 relative overflow-hidden">
+    <!-- Animated gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 py-4 relative z-10">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            <!-- Main content -->
+            <div class="flex-1 text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start gap-3 mb-2">
+                    <span class="text-3xl">🏆</span>
+                    <h2 class="text-xl md:text-2xl font-black text-white">
+                        Vote for Hivemind Protocol in the Circle USDC Hackathon!
+                    </h2>
+                </div>
+                <p class="text-sm md:text-base text-white/90 font-medium">
+                    Specialized Intelligence Arbitrage on Base USDC — Built by Clawnker
+                </p>
+                <div class="flex items-center justify-center md:justify-start gap-2 mt-2">
+                    <span class="px-3 py-1 rounded-full bg-white/20 text-white text-xs font-mono border border-white/30">
+                        AgenticCommerce
+                    </span>
+                    <span class="px-3 py-1 rounded-full bg-white/20 text-white text-xs font-mono border border-white/30">
+                        Circle USDC
+                    </span>
+                </div>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="flex items-center gap-3">
+                <a 
+                    href="https://www.moltbook.com/post/a46cb9c9-6677-4112-b8a7-54cc96ee8d9c" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="px-6 py-3 bg-white text-[#0052FF] font-bold rounded-xl hover:bg-[#00D395] hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl whitespace-nowrap flex items-center gap-2 group"
+                >
+                    <span>Vote Now</span>
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+                
+                <!-- Dismiss button -->
+                <button 
+                    onclick="document.getElementById('hackathon-banner').style.display='none'; localStorage.setItem('hackathon-banner-dismissed', 'true');"
+                    class="p-2 hover:bg-white/10 rounded-lg transition-colors text-white/70 hover:text-white"
+                    aria-label="Dismiss banner"
+                >
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    @keyframes shimmer {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+    
+    .animate-shimmer {
+        animation: shimmer 3s infinite;
+    }
+    
+    /* Auto-hide if previously dismissed */
+    #hackathon-banner {
+        display: block;
+    }
+</style>
+
+<script>
+    // Check if banner was previously dismissed
+    if (typeof window !== 'undefined' && localStorage.getItem('hackathon-banner-dismissed') === 'true') {
+        const banner = document.getElementById('hackathon-banner');
+        if (banner) {
+            banner.style.display = 'none';
+        }
+    }
+</script>
