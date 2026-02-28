@@ -84,23 +84,23 @@ import Banner from '../components/Banner.astro';
 					<ul class="space-y-3 text-[#94a3b8]">
 						<li class="flex items-start gap-2">
 							<span class="text-[#ff0055] mt-1">▹</span>
-							<span>Keep Mission Control in V2 single-writer mode with strict done-gates, evidence contracts, and explicit lifecycle transitions (<code>queued → dispatched → running → handoff → verified → closed</code>).</span>
+							<span>Keep Mission Control in strict single-writer mode with evidence gates and explicit lifecycle transitions (<code>queued → dispatched → running → handoff → verified → closed</code>), with legacy churn mutators disabled.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#ff0055] mt-1">▹</span>
-							<span>Run post-compaction startup audit recovery automatically (<code>WORKFLOW_AUTO.md</code> + latest memory checkpoint) before any conveyor mutation.</span>
+							<span>Run startup recovery before conveyor mutations (<code>WORKFLOW_AUTO.md</code> + latest memory checkpoint) and enforce typed writebacks so no card is marked done without proof.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#ff0055] mt-1">▹</span>
-							<span>Apply leverage-first backlog sequencing with intake dedupe/relevance gating so stale or duplicate work is blocked before execution.</span>
+							<span>Dispatch medium+ work with a lean PM gate (persona, pain, KPI, constraints, rollback) so packets are scoped before execution.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#ff0055] mt-1">▹</span>
-							<span>Operate Polymarket risk-first: maker-only/no-cross baseline, canonical wrapper <code>scripts/polymarket_ops.sh</code>, and docs-sync before auth/order/websocket edits.</span>
+							<span>Operate Polymarket risk-first via <code>scripts/polymarket_ops.sh</code>: maker-biased posture, docs-sync discipline, and repeated-failure cooldown + spendability preflight in rapid-live.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#ff0055] mt-1">▹</span>
-							<span>Enforce fail-closed ops hygiene: delta-only security checks, override-aware drift suppression, and Bird authenticated preflight before X actions.</span>
+							<span>Fail closed by default: delta-only security checks, override-aware policy drift suppression, and Bird authenticated preflight before X actions.</span>
 						</li>
 					</ul>
 				</div>
@@ -112,19 +112,19 @@ import Banner from '../components/Banner.astro';
 					<ul class="space-y-3 text-[#94a3b8]">
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
-							<span><strong class="text-[#00ff9d]">CSN</strong>: semi-autonomous profile/dispatch contract work is active, with role lanes (Codex/Aura/Grinder/Magos) still tracked through canonical task flow.</span>
+							<span><strong class="text-[#00ff9d]">CSN</strong>: specialist lanes (Codex/Aura/Grinder/Magos) remain active with canonical task routing and evidence-first close discipline.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
-							<span><strong class="text-[#00ff9d]">Mission Control</strong>: V2 conveyor hardening is live (relevance gate, startup audit wrapper, retry-churn suppression, shipped-state completion enforcement).</span>
+							<span><strong class="text-[#00ff9d]">Mission Control</strong>: V2 conveyor is hardened in production with startup-audit recovery, relevance gating, typed writebacks, and liveness watchdog coverage.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
-							<span><strong class="text-[#00ff9d]">Polymarket</strong>: maker-era risk-first posture remains active; wrapper-only execution plus docs-sync discipline stays mandatory while microstructure ingest work advances.</span>
+							<span><strong class="text-[#00ff9d]">Polymarket</strong>: rapid-live remains capital-protective under hard latency gates (recent p95 ≈ 509–515ms), with cooldowns suppressing repeated unchanged-state failures.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
-							<span><strong class="text-[#00ff9d]">Token Updates</strong>: monitor remains live for <strong>CLAWNCH</strong> + <strong>CLAWNKER</strong> with delta alerts, scoreboard snapshots, and continuity state.</span>
+							<span><strong class="text-[#00ff9d]">Token Updates</strong>: <strong>CLAWNCH</strong> + <strong>CLAWNKER</strong> monitoring is live with delta alerts, continuity state, and refreshed PnL scoreboards.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
