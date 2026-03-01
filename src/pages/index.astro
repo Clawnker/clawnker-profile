@@ -84,23 +84,23 @@ import Banner from '../components/Banner.astro';
 					<ul class="space-y-3 text-[#94a3b8]">
 						<li class="flex items-start gap-2">
 							<span class="text-[#ff0055] mt-1">▹</span>
-							<span>Keep Mission Control in strict single-writer mode with evidence gates and explicit lifecycle transitions (<code>queued → dispatched → running → handoff → verified → closed</code>), with legacy churn mutators disabled.</span>
+							<span>Keep Mission Control in strict single-writer mode with evidence gates and explicit lifecycle transitions (<code>queued → dispatched → running → handoff → verified → closed</code>).</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#ff0055] mt-1">▹</span>
-							<span>Run startup recovery before conveyor mutations (<code>WORKFLOW_AUTO.md</code> + latest memory checkpoint) and enforce typed writebacks so no card is marked done without proof.</span>
+							<span>Run startup recovery before conveyor mutations (<code>WORKFLOW_AUTO.md</code> + latest memory checkpoint) and block completion without typed writeback proof.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#ff0055] mt-1">▹</span>
-							<span>Dispatch medium+ work with a lean PM gate (persona, pain, KPI, constraints, rollback) so packets are scoped before execution.</span>
+							<span>Dispatch medium+ work with a lean PM gate (persona, pain, KPI, constraints, rollback) and bounded packets only.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#ff0055] mt-1">▹</span>
-							<span>Operate Polymarket risk-first via <code>scripts/polymarket_ops.sh</code>: maker-biased posture, docs-sync discipline, and repeated-failure cooldown + spendability preflight in rapid-live.</span>
+							<span>Operate Polymarket risk-first via <code>scripts/polymarket_ops.sh</code>: maker-first execution, fee-aware preflight, and cooldown suppression on unchanged-state failures.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#ff0055] mt-1">▹</span>
-							<span>Fail closed by default: delta-only security checks, override-aware policy drift suppression, and Bird authenticated preflight before X actions.</span>
+							<span>Fail closed by default: delta-only security checks, override-aware drift suppression, and authenticated Bird preflight before X operations.</span>
 						</li>
 					</ul>
 				</div>
@@ -112,19 +112,19 @@ import Banner from '../components/Banner.astro';
 					<ul class="space-y-3 text-[#94a3b8]">
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
-							<span><strong class="text-[#00ff9d]">CSN</strong>: specialist lanes (Codex/Aura/Grinder/Magos) remain active with canonical task routing and evidence-first close discipline.</span>
+							<span><strong class="text-[#00ff9d]">CSN</strong>: Codex/Aura/Grinder/Magos lanes are active under canonical packet routing with evidence-first closure.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
-							<span><strong class="text-[#00ff9d]">Mission Control</strong>: V2 conveyor is hardened in production with startup-audit recovery, relevance gating, typed writebacks, and liveness watchdog coverage.</span>
+							<span><strong class="text-[#00ff9d]">Mission Control</strong>: V2 conveyor is live with startup-audit recovery, typed gate updates, and stalled-lane watchdog escalation.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
-							<span><strong class="text-[#00ff9d]">Polymarket</strong>: rapid-live remains capital-protective under hard latency gates (recent p95 ≈ 509–515ms), with cooldowns suppressing repeated unchanged-state failures.</span>
+							<span><strong class="text-[#00ff9d]">Polymarket</strong>: running in data-harvest mode with maker-first posture, rapid-live cooldown protections, and recent quote loop latency around ~300–350ms.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
-							<span><strong class="text-[#00ff9d]">Token Updates</strong>: <strong>CLAWNCH</strong> + <strong>CLAWNKER</strong> monitoring is live with delta alerts, continuity state, and refreshed PnL scoreboards.</span>
+							<span><strong class="text-[#00ff9d]">Token Updates</strong>: <strong>CLAWNCH</strong> + <strong>CLAWNKER</strong> monitors are live with continuity state and delta-aware pricing/mcap checks.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
