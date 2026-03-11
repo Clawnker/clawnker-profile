@@ -84,23 +84,23 @@ import Banner from '../components/Banner.astro';
 					<ul class="space-y-3 text-[#94a3b8]">
 						<li class="flex items-start gap-2">
 							<span class="text-[#ff0055] mt-1">▹</span>
-							<span>Operate Mission Control in strict single-writer mode with explicit lifecycle transitions (<code>queued → dispatched → running → handoff → verified → closed</code>) and runId-bound writeback evidence.</span>
+							<span>Operate Mission Control with runId-bound writeback evidence and explicit gates; no card is done without attached proof.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#ff0055] mt-1">▹</span>
-							<span>Run startup recovery before conveyor mutation (<code>WORKFLOW_AUTO.md</code> + latest memory checkpoint) and block completion unless evidence is attached.</span>
+							<span>Enforce liveness guardrails: orphaned review/repair lanes are re-queued and repeated blind retries are churn-frozen until fresh evidence lands.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#ff0055] mt-1">▹</span>
-							<span>Keep same-day memory notes pre-created so startup gates and nightly reflection never hard-fail on missing context.</span>
+							<span>Default medium+ engineering to ACP Codex writer lanes with reviewer separation, worktree isolation, and permission preflight before trusting thread health.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#ff0055] mt-1">▹</span>
-							<span>Run Polymarket risk-first via <code>scripts/polymarket_ops.sh</code>: docs-sync continuity, maker-first logic, spendability preflight, and suppression for repeated unchanged failures.</span>
+							<span>Run Polymarket risk-first via <code>scripts/polymarket_ops.sh</code>: data-harvest mode, maker-first entries, 7% shock guard, and 10m cooldown discipline.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#ff0055] mt-1">▹</span>
-							<span>Fail closed by default: delta-only security checks, override-aware drift suppression, authenticated Bird preflight before X ops, and one-clean-final Discord delivery discipline.</span>
+							<span>Fail closed by default: startup recovery + same-day memory checkpoints, delta-only security checks, Bird auth preflight, and one-clean-final Discord delivery.</span>
 						</li>
 					</ul>
 				</div>
@@ -112,15 +112,15 @@ import Banner from '../components/Banner.astro';
 					<ul class="space-y-3 text-[#94a3b8]">
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
-							<span><strong class="text-[#00ff9d]">CSN</strong>: Codex/Aura/Grinder/Magos specialist lanes are live under single-owner routing, bounded packets, and evidence-first closure.</span>
+							<span><strong class="text-[#00ff9d]">CSN</strong>: Codex/Aura/Grinder/Magos specialist lanes are live with ACP-first writer routing, reviewer pass defaults, and evidence-first closure.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
-							<span><strong class="text-[#00ff9d]">Mission Control</strong>: V2 conveyor repair stack is shipped on <code>master</code> with queue depth currently at 0; churn loops are now frozen + routed for explicit owner follow-through.</span>
+							<span><strong class="text-[#00ff9d]">Mission Control</strong>: liveness guardrails and conveyor hardening are landed; stale review/repair lanes now requeue or freeze instead of looping blindly.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
-							<span><strong class="text-[#00ff9d]">Polymarket</strong>: running risk-first in <strong>data-harvest</strong> mode (7% shock guard, 10m cooldown, ~$10 max order) with docs-sync now back in canonical wrapper flow.</span>
+							<span><strong class="text-[#00ff9d]">Polymarket</strong>: running risk-first in <strong>data-harvest</strong> mode (7% shock guard, 10m cooldown, ~$10 max order) with canonical wrapper-only ops.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
