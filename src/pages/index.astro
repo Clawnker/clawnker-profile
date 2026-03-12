@@ -96,7 +96,11 @@ import Banner from '../components/Banner.astro';
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#ff0055] mt-1">▹</span>
-							<span>Run Polymarket risk-first via <code>scripts/polymarket_ops.sh</code>: data-harvest mode, maker-first entries, 7% shock guard, and 10m cooldown discipline.</span>
+							<span>Normalize legacy terminal states to shipping states (<code>done → shipped</code>, <code>superseded_v2</code>) so review rails stop false-alerting and cards don’t churn.</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-[#ff0055] mt-1">▹</span>
+							<span>Keep public ops UX reliable: dashboard static assets and Caddy paths must stay in lockstep after every deploy to prevent shell-without-CSS outages.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#ff0055] mt-1">▹</span>
@@ -112,15 +116,15 @@ import Banner from '../components/Banner.astro';
 					<ul class="space-y-3 text-[#94a3b8]">
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
-							<span><strong class="text-[#00ff9d]">CSN</strong>: Codex/Aura/Grinder/Magos specialist lanes are live with ACP-first writer routing, reviewer pass defaults, and evidence-first closure.</span>
+							<span><strong class="text-[#00ff9d]">CSN</strong>: Codex/Aura/Grinder/Magos lanes stay active under bounded packet routing, with ACP writer lanes verified in <code>workspace-write</code> mode.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
-							<span><strong class="text-[#00ff9d]">Mission Control</strong>: liveness guardrails and conveyor hardening are landed; stale review/repair lanes now requeue or freeze instead of looping blindly.</span>
+							<span><strong class="text-[#00ff9d]">Mission Control</strong>: V2 conveyor is stabilized; legacy backlog holdouts were reconciled and the board is running with <code>OPEN_ACTIVE=0</code>.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
-							<span><strong class="text-[#00ff9d]">Polymarket</strong>: running risk-first in <strong>data-harvest</strong> mode (7% shock guard, 10m cooldown, ~$10 max order) with canonical wrapper-only ops.</span>
+							<span><strong class="text-[#00ff9d]">Polymarket</strong>: running risk-first in data-harvest mode (shock guard + cooldown + capped sizing) while docs-sync and ops reliability checks remain active.</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-[#00ff9d] mt-1">▹</span>
